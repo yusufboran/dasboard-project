@@ -1,24 +1,7 @@
-# cryptotransaction
+https://dasboard-project.vercel.app/
 
-## Project setup
-```
-npm install
-```
+<img src="https://github.com/ysfbrn/Dasboard-Project/tree/main/src/screenshots/home.png" width="200" height="200"/>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<img src="https://github.com/ysfbrn/Dasboard-Project/tree/main/src/screenshots/list.png" width="200" height="200"/>
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<img src="https://github.com/ysfbrn/Dasboard-Project/tree/main/src/screenshots/stting.png" width="200" height="200"/>
