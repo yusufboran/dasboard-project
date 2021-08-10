@@ -52,9 +52,10 @@
     <v-row>
       <v-col cols="12" sm="6">
         <v-card>
-          <v-app-bar flat color="rgba(0,0,0,0)">
-            <v-toolbar-title class="title black--text pl-0 ml-2">
-              Impression
+          <v-app-bar flat color="white">
+            <v-toolbar-title class="title black--text pl-0 ml-2 grey--text" >
+              <i class="fas fa-dollar-sign"></i> /
+              <i class="fas fa-lira-sign"></i>
             </v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn
@@ -148,8 +149,9 @@
               >
               </v-sparkline>
               <v-card-actions class="justify-end">
-                <v-btn text color="green">
-                  <v-icon class="mt-n2 pr-2">fas fa-sort-down</v-icon> 8.5
+                <v-btn text :color="statusColor">
+                  <v-icon class="mt-n2 pr-2">{{ statusIcon }}</v-icon>
+                  {{ status() }}%
                 </v-btn>
               </v-card-actions>
             </v-col>
@@ -211,6 +213,8 @@ import axios from "axios";
 export default {
   name: "Home",
   data: () => ({
+    statusColor: "green",
+    statusIcon: "fas fa-sort-down",
     weeklyButton: {
       color: "",
       textColor: "white--text",
@@ -222,7 +226,7 @@ export default {
     fill: true,
     padding: 8,
     radius: 10,
-    value: [0, 2, 5, 9, 5, 10, 3],
+    value: [8.56, 8.54, 8.44, 8.43, 8.34, 8.4, 8.54],
     width: 2,
     lineCap: "round",
     type: "trend",
@@ -262,16 +266,33 @@ export default {
         console.log(response.data.bpi.USD);
       });
   },
-  /* weeklyButton: {
-      color: "",
-      textColor: "white--text",
-    },
-    monthlyButton: {
-      color: "lighten-4",
-      textColor: "deep-purple--text",
-    },
-*/
+
   methods: {
+    status() {
+      var yestarday = this.value.length - 2;
+      var today = this.value.length - 1;
+
+      yestarday = this.value[yestarday];
+      today = this.value[today];
+
+      today -= yestarday;
+
+      var processValue = (today * 100) / yestarday;
+      processValue = processValue.toFixed(2);
+
+      if (processValue == 0) {
+        this.statusColor = "blue";
+        this.statusIcon = "-";
+        return 0;
+      } else if (processValue < 0) {
+        this.statusIcon = "fas fa-sort-down";
+        this.statusColor = "red";
+        return processValue;
+      }
+      this.statusIcon = "fas fa-sort-up";
+      this.statusColor = "green";
+      return processValue;
+    },
     WBtn() {
       this.weeklyButton.color = "";
       this.weeklyButton.textColor = "white--text";
@@ -286,13 +307,14 @@ export default {
     },
     Weekly() {
       this.WBtn();
-      this.value = [8.56, 8.54, 8.44, 8.43, 8.34, 8.40, 8.74];
+      this.value = [8.56, 8.54, 8.44, 8.43, 8.34, 8.4, 8.54];
     },
     Monthly() {
       this.MBtn();
       this.value = [
-        8.56, 8.54, 8.44, 8.43, 8.34, 8.40, 8.74, 8.80, 8.88, 8.84, 8.78, 8.90, 8.83, 8.82,
-        8.90, 8.94, 8.89, 8.82, 8.87, 8.83, 8.60, 8.65, 8.71, 8.66, 8.60, 8.64, 8.62, 8.55
+        8.56, 8.54, 8.44, 8.43, 8.34, 8.4, 8.54, 8.8, 8.88, 8.84, 8.78, 8.9,
+        8.83, 8.82, 8.9, 8.94, 8.89, 8.82, 8.87, 8.83, 8.6, 8.65, 8.71, 8.66,
+        8.6, 8.64, 8.62, 8.56,
       ];
     },
   },
