@@ -1,6 +1,6 @@
 # vue-vuetify-dashboard
 
-<a href="https://dasboard-project.vercel.app/"> Active link of the project:</a>  https://dasboard-project.vercel.app/
+Active link of the project:  https://dasboard-project.vercel.app/
 
 ![Dashboard Image](https://github.com/ysfbrn/Dasboard-Project/blob/main/src/screenshots/home.jpg)
 
