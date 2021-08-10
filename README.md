@@ -1,7 +1,25 @@
-https://dasboard-project.vercel.app/
+# vue-vuetify-dashboard
 
-<img src="https://github.com/ysfbrn/Dasboard-Project/tree/main/src/screenshots/home.png" width="200" height="200"/>
+<a href="https://dasboard-project.vercel.app/"> Active link of the project:</a>  https://dasboard-project.vercel.app/
 
-<img src="https://github.com/ysfbrn/Dasboard-Project/tree/main/src/screenshots/list.png" width="200" height="200"/>
+![Dashboard Image](src/screenshots/home.jpg)
 
-<img src="https://github.com/ysfbrn/Dasboard-Project/tree/main/src/screenshots/stting.png" width="200" height="200"/>
+## Work in Progress
+**Beware!** This is a work in progress and may not be reliable working right now. The following elements will be added in the (hopefully) near future:
+- [ ] Dark mode
+- [ ] Login and Logout Page
+- [ ] User Profile Page 
+- [ ] Sign-Up Page
+
+
+
+![Dashboard Image](src/screenshots/list.jpg)
+
+
+
+![Dashboard Image](src/screenshots/setting.jpg)
+
+
+
+
+There may be errors and omissions. I am in the learning process
