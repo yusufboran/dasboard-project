@@ -2,7 +2,7 @@
 
 <a href="https://dasboard-project.vercel.app/"> Active link of the project:</a>  https://dasboard-project.vercel.app/
 
-![Dashboard Image](src/screenshots/home.jpg)
+![Dashboard Image](https://github.com/ysfbrn/Dasboard-Project/blob/main/src/screenshots/home.jpg)
 
 ## Work in Progress
 **Beware!** This is a work in progress and may not be reliable working right now. The following elements will be added in the (hopefully) near future:
@@ -13,11 +13,11 @@
 
 
 
-![Dashboard Image](src/screenshots/list.jpg)
+![Dashboard Image](https://github.com/ysfbrn/Dasboard-Project/blob/main/src/screenshots/list.jpg)
 
 
 
-![Dashboard Image](src/screenshots/setting.jpg)
+![Dashboard Image](https://github.com/ysfbrn/Dasboard-Project/blob/main/src/screenshots/setting.jpg)
 
 
 
