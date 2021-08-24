@@ -7,6 +7,8 @@ import ProductList from "../views/ProductList"
 import TheTodo from "../views/Todo"
 import Calendar from "../views/Calendar"
 import Settings from "../views/Settings"
+import ErrorPage from "../components/Error.vue"
+
 
 
 Vue.use(VueRouter)
@@ -43,6 +45,10 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
+  },
+  {
+    path: '/error',
+    component: ErrorPage
   }
 ]
 

@@ -1,5 +1,5 @@
 <template>
-  <div id="create" class="pin">
+  <div id="create" class="pin" v-if="$route.path != '/error'">
     <v-speed-dial
       v-model="fab"
       :bottom="true"
